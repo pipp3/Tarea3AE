@@ -26,7 +26,7 @@ router.get('/:id', authenticateCompany, (req, res) => {
     const sensorId = req.params.id;
     ;
 
-    db.get(`SELECT * FROM sensor WHERE id = ?`, [sensorId], (err, row) => {
+    db.get(`SELECT * FROM sensor WHERE sensor_id = ?`, [sensorId], (err, row) => {
         if (err) {
             return res.status(500).json({ error: 'Failed to retrieve sensor', details: err.message });
         }
@@ -69,7 +69,7 @@ router.put('/:id', authenticateCompany, (req, res) => {
 router.delete('/:id', authenticateCompany, (req, res) => {
     const sensorId = req.params.id;
 
-    const stmt = db.prepare(`DELETE FROM sensor WHERE id = ?`);
+    const stmt = db.prepare(`DELETE FROM sensor WHERE sensor_id = ?`);
     stmt.run(sensorId, company_id, (err) => {
         stmt.finalize();
         if (err) {
