@@ -61,14 +61,14 @@ router.get('/', authenticateCompany, (req, res) => {
 
 router.put('/:id', authenticateCompany, (req, res) => {
     const companyId = req.params.id;
-    const { company_name, company_api_key } = req.body;
+    const { company_name } = req.body;
 
-    if (!company_name || !company_api_key) {
+    if (!company_name) {
         return res.status(400).json({ error: 'Company name and API key are required' });
     }
 
-    const stmt = db.prepare(`UPDATE company SET company_name = ?, company_api_key = ? WHERE id = ?`);
-    stmt.run(company_name, company_api_key, companyId, (err) => {
+    const stmt = db.prepare(`UPDATE company SET company_name = ? WHERE id = ?`);
+    stmt.run(company_name, companyId, (err) => {
         stmt.finalize();
         if (err) {
             return res.status(500).json({ error: 'Failed to update company', details: err.message });

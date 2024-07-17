@@ -7,7 +7,7 @@ import sensorRoutes from './routes/sensor.js';
 import sensorDataRoutes from './routes/sensor_data.js';
 
 const app = express();
-const port = 3000; // Puedes cambiar el puerto si lo deseas
+const port = 3000; 
 app.use(bodyParser.json());
 
 

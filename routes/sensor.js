@@ -55,7 +55,7 @@ router.put('/:id', authenticateCompany, (req, res) => {
         return res.status(400).json({ error: 'Sensor name, type, and meta are required' });
     }
 
-    const stmt = db.prepare(`UPDATE sensor SET sensor_name = ?,sensor_category=?, sensor_type = ?, sensor_meta = ? WHERE id = ?`);
+    const stmt = db.prepare(`UPDATE sensor SET sensor_name = ?,sensor_category=?, sensor_type = ?, sensor_meta = ? WHERE sensor_id = ?`);
     stmt.run(sensor_name,sensor_category, sensor_type, sensor_meta, sensorId, (err) => {
         stmt.finalize();
         if (err) {
