@@ -70,7 +70,7 @@ router.delete('/:id', authenticateCompany, (req, res) => {
     const sensorId = req.params.id;
 
     const stmt = db.prepare(`DELETE FROM sensor WHERE sensor_id = ?`);
-    stmt.run(sensorId, company_id, (err) => {
+    stmt.run(sensorId, (err) => {
         stmt.finalize();
         if (err) {
             return res.status(500).json({ error: 'Failed to delete sensor', details: err.message });
