@@ -22,10 +22,13 @@ Este proyecto consiste en el desarrollo de una API RESTful (Representational Sta
 - **Autenticación y autorización:** Implementación de un middleware para gestionar claves API (API keys).
 
 ## Instalación
-
+0.**Previamente instalar NodesJS, NPM y SQLite.
 1. **Clonar el repositorio:**
    ```bash
    git clone https://github.com/tu_usuario/tu_repositorio
+2.**Instalar dependecias:**
+   ```bash
+   npm install
 
 ## Uso
 
