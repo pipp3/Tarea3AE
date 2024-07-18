@@ -23,7 +23,9 @@ Este proyecto consiste en el desarrollo de una API RESTful (Representational Sta
 
 ## Instalación
 
-(Aquí puedes agregar instrucciones sobre cómo instalar y configurar el proyecto)
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/tu_usuario/tu_repositorio
 
 ## Uso
 
