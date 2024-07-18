@@ -14,10 +14,10 @@ Este proyecto consiste en el desarrollo de una API RESTful (Representational Sta
 
 ## Funcionalidades Principales
 
-- **Gestión de usuarios administradores:** Creación y autenticación.
-- **Gestión de compañías:** Creación, edición y eliminación.
-- **Gestión de ubicaciones:** Creación, edición y eliminación.
-- **Gestión de sensores:** Creación, edición y eliminación.
+- **Gestión de usuarios administradores:** Creación .
+- **Gestión de compañías:** Creación, visualizar, edición y eliminación.
+- **Gestión de ubicaciones:** Creación,visualizar, edición y eliminación.
+- **Gestión de sensores:** Creación,visualizar, edición y eliminación.
 - **Gestión de datos de sensores:** Inserción y consulta.
 - **Autenticación y autorización:** Implementación de un middleware para gestionar claves API (API keys).
 
