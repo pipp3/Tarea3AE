@@ -30,15 +30,3 @@ Este proyecto consiste en el desarrollo de una API RESTful (Representational Sta
    ```bash
    npm install
 
-
-## Uso
-
-1
-
-## Contribución
-
-(Aquí puedes agregar información sobre cómo otros desarrolladores pueden contribuir al proyecto)
-
-## Licencia
-
-(Aquí puedes especificar la licencia bajo la cual se distribuye el proyecto)
